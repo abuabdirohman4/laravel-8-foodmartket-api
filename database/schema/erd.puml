@@ -1,15 +1,3 @@
-class food {
-    id : integer
-    --
-    name : string
-    description : text
-    ingredients : text
-    price : integer
-    rate : double
-    type : string
-    photo : text
-}
-
 class users {
     id : integer
     --
@@ -21,6 +9,18 @@ class users {
     houseNumber : string
     phoneNumber : string
     city : string
+}
+
+class food {
+    id : integer
+    --
+    name : string
+    description : text
+    ingredients : text
+    price : integer
+    rate : double
+    type : string
+    photo : text
 }
 
 class transactions {
