@@ -1,0 +1,38 @@
+class food {
+    id : integer
+    --
+    name : string
+    description : text
+    ingredients : text
+    price : integer
+    rate : double
+    type : string
+    photo : text
+}
+
+class users {
+    id : integer
+    --
+    name : string
+    email : string
+    password : string
+    roles : string
+    address : text
+    houseNumber : string
+    phoneNumber : string
+    city : string
+}
+
+class transactions {
+    id : integer
+    --
+    user_id : integer
+    food_id : integer
+    quantity : integer
+    total : integer
+    status : string
+    payment_url : text
+}
+
+users ||--|{ transactions
+food ||--|{ transactions
