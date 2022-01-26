@@ -31,6 +31,7 @@ return new class extends Migration
             
             $table->string('roles')->default('USER');
             
+            $table->softDeletes();
             $table->timestamps();
         });
     }
