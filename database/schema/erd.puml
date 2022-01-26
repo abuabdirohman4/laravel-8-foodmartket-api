@@ -6,8 +6,8 @@ class users {
     password : string
     roles : string
     address : text
-    houseNumber : string
-    phoneNumber : string
+    house_number : string
+    phone_number : string
     city : string
 }
 
