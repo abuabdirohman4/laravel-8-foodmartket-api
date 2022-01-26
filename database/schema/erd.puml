@@ -19,7 +19,7 @@ class food {
     ingredients : text
     price : integer
     rate : double
-    type : string
+    types : string
     photo : text
 }
 
