@@ -20,7 +20,7 @@ class food {
     price : integer
     rate : double
     types : string
-    photo : text
+    picture_path : text
 }
 
 class transactions {
