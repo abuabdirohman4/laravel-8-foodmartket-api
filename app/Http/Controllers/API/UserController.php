@@ -10,13 +10,13 @@ class UserController extends Controller
 {
     public function login(Request $request) {
         try {
-            // Validasi Input
-            $request->validate{[
+            // Validation Input
+            $request->validate([
                 'email' => 'email:dns|required',
                 'password' => 'required'
-            ]};
+            ]);
 
-            // Mengecek credentials (login)
+            // Check credentials (login)
             $credentials = request(['email','password']);
             if(!Auth::atempt($credentials)) {
                 return ResponseFormatter::error([
@@ -24,14 +24,14 @@ class UserController extends Controller
                 ], 'Authentication Failed', 500);
             }
 
-            // If hask now match then give error
+            // If hash now match then give error
             $user = User::where('email', $request->email)->first();
             if(!Hash::check($request->password, $user->password, [])){
                 throw ne\Exception("invalid Credentials");
             }
 
             // If success then logged
-            $tokenresult = $result-> createToken('authToken')->plainTextToken;
+            $tokenResult = $user-> createToken('authToken')->plainTextToken;
             return ResponseFormater::success([
                 'acess_token' => $tokenResult,
                 'token_type' => 'Bearer',
